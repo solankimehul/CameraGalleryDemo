@@ -1,0 +1,43 @@
+---------------------------------------------------------------------------------------------
+               To use this demo on your working app
+---------------------------------------------------------------------------------------------
+
+01. First copy all drawable start with "image_dialog_*" and paste inside your drawable dir
+02. Then copy past camera_util folder inside your package directory
+03. Then copy dialog_choose_image.xml and paste inside layout dir
+
+04. Add below color in color.xml
+        <color name="white">#FFFFFF</color>
+        <color name="colorTextDark">#555555</color>
+
+05. Add Quick Permission dependency for runtime permission
+        Project : build.gradle : inside allProjects > repositories > maven { url "http://jitpack.io/" }
+        App : build.gradle :  implementation 'com.github.quickpermissions:quickpermissions-kotlin:0.4.0'
+
+06. Add below permission on AndroidManifest.xml
+            <uses-permission android:name="android.permission.CAMERA" />
+            <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+07. Create file_paths.xml for file provider
+        right click on res dir and click >  new > xml > app actions xml file > and give name "file_paths"
+        replace below code in file_paths.xml
+                    <?xml version ="1.0" encoding ="utf-8"?>
+                    <paths xmlns:android="http://schemas.android.com/apk/res/android">
+                        <external-path name="external_files" path="."/>
+                    </paths>
+
+08. Add provider inside AndroidManifest.xml
+        Add below code inside <application> </application>
+                    <provider
+                            android:name="androidx.core.content.FileProvider"
+                            android:authorities="${applicationId}.provider"
+                            android:exported="false"
+                            android:grantUriPermissions="true">
+                                <meta-data
+                                        android:name="android.support.FILE_PROVIDER_PATHS"
+                                        android:resource="@xml/file_paths" />
+                     </provider>
+
+
+09.

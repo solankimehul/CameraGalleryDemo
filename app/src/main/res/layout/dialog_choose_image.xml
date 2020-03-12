@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="@drawable/image_dialog_border"
+		android:orientation="vertical">
+
+	<TextView
+			android:id="@+id/tvDialogTitle"
+			android:layout_width="match_parent"
+			android:layout_height="50dp"
+			android:layout_marginBottom="15dp"
+			android:background="@color/colorPrimary"
+			android:gravity="center"
+			android:text="Choose From"
+			android:textColor="@color/white"
+			android:textSize="16sp"
+			android:textStyle="bold" />
+
+	<LinearLayout
+			android:layout_gravity="center_horizontal"
+			android:gravity="center_horizontal"
+			android:layout_marginStart="35dp"
+			android:layout_marginEnd="35dp"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:orientation="vertical">
+		<LinearLayout
+				android:id="@+id/llCamera"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:gravity="center_vertical"
+				android:orientation="horizontal">
+
+			<ImageView
+					android:layout_width="50dp"
+					android:layout_height="50dp"
+					android:src="@drawable/image_dialog_camera"
+					android:tint="@color/colorTextDark" />
+
+			<TextView
+					android:layout_width="80dp"
+					android:layout_height="wrap_content"
+					android:layout_marginStart="10dp"
+					android:text="Camera"
+					android:textColor="@color/colorTextDark"
+					android:textStyle="bold" />
+
+
+		</LinearLayout>
+
+		<LinearLayout
+				android:id="@+id/llGallery"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="0dp"
+				android:gravity="center_vertical"
+				android:orientation="horizontal">
+
+			<ImageView
+					android:layout_width="50dp"
+					android:layout_height="50dp"
+					android:src="@drawable/image_dialog_gallery"
+					android:tint="@color/colorTextDark" />
+
+			<TextView
+					android:layout_width="80dp"
+					android:layout_height="wrap_content"
+					android:layout_marginStart="10dp"
+					android:text="Gallery"
+					android:textColor="@color/colorTextDark"
+					android:textStyle="bold" />
+
+
+		</LinearLayout>
+
+		<LinearLayout
+				android:id="@+id/llClose"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="0dp"
+				android:layout_marginBottom="25dp"
+				android:gravity="center_vertical"
+				android:orientation="horizontal">
+
+			<ImageView
+					android:layout_width="50dp"
+					android:layout_height="50dp"
+					android:src="@drawable/image_dialog_close_line"
+					android:tint="@color/colorTextDark" />
+
+			<TextView
+					android:layout_width="80dp"
+					android:layout_height="wrap_content"
+					android:layout_marginStart="10dp"
+					android:text="Cancel"
+					android:textColor="@color/colorTextDark"
+					android:textStyle="bold" />
+
+
+		</LinearLayout>
+
+	</LinearLayout>
+</LinearLayout>

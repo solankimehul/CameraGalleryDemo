@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FirstFragment">
+
+    <LinearLayout
+        android:padding="25dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:src="@drawable/image_dialog_placeholder"
+            android:id="@+id/imgCamera"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="200dp"/>
+
+        <ImageView
+            android:layout_marginStart="10dp"
+            android:src="@drawable/image_dialog_placeholder"
+            android:id="@+id/imgGallery"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="200dp"/>
+
+    </LinearLayout>
+
+
+    <Button
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:background="@color/colorPrimary"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/btnPicImage"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Pick Image" />
+
+</RelativeLayout>
