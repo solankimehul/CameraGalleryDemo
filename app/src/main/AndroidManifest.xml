@@ -17,6 +17,7 @@
             android:name="com.google.android.actions"
             android:resource="@xml/file_paths" />
 
+
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
